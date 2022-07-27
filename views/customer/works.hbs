@@ -1,0 +1,40 @@
+<section>
+    
+    <div class="container">
+      <div class="row mt-2">
+          <h2>Works</h2>
+            {{!-- <a href="/worker/addwork" class="btn btn-success ml-auto" style="height: 28px;">Add product</a> --}}
+        </div>
+    <table class="table" id="table_id">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Category</th>
+      {{!-- <th scope="col">Description</th> --}}
+      <th scope="col">Image</th>
+      <th scope="col">Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each work12}}
+    <tr>
+      <td>{{this.works.Name}}</td>
+      <td>{{this.works.Category}}</td>
+      {{!-- <td>{{this.works.Description}}</td> --}}
+      <td><img style="width: 50px;height: 50px" src="/images/work/{{this._id}}.png" alt=""></td>
+      <td>
+        <a href="/workview/{{this._id}}" class="btn btn-primary">view</a>
+         
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+    </div>
+</section>
+
+<script>
+  $(document).ready( function () {
+    $('#table_id').DataTable();
+} );
+</script>

@@ -1,0 +1,45 @@
+<section>
+    
+    <div class="container" id="table_id">
+      <div class="row mt-2">
+          <h2>Accpeted Works</h2>
+            
+        </div>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Category</th>
+      <th scope="col">Description</th>
+      <th scope="col">Estimate price</th>
+      <th scope="col">Customer name</th>
+      <th scope="col">Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each content}}
+    <tr>
+      <td>{{this.Name}}</td>
+      <td>{{this.Category}}</td>
+      <td>{{this.Description}}</td>
+      <td>{{this.Price}}</td>
+      <td>{{this.C_Name}}</td>
+      <td><img style="width: 50px;height: 50px" src="/images/work/{{this.item_id}}.png" alt=""></td>
+      <td>
+        
+        <a href="/worker/viewacpwork/{{this._id}}" class="btn btn-primary">confirm</a>
+        <a href="/worker/deleteacpwork/{{this._id}}" class="btn btn-primary">delete</a>
+         {{!-- <a href="/worker/delete-work/{{this._id}}" class="btn btn-danger" onclick="return confirm('are you want to delete {{this.works.Name}} ?')">Delete</a> --}}
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+    </div>
+</section>
+
+<script>
+  $(document).ready( function () {
+    $('#table_id').DataTable();
+} );
+</script>

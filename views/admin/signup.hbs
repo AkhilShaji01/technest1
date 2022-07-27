@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-6 m-auto">
+        <div class="container mt-5 pl-5">
+            <h2 class="text-center">add a new admin account</h2>
+            <form action="/admin/signup" method="post"> 
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" name="Name" placeholder="Enter name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email address</label>
+                    <input type="email" class="form-control" name="Email" placeholder="Enter email" required>
+
+                </div>
+                {{#if signuperror}}
+            <p class="signup">This email is already used. try to create with a new one </p>
+            {{/if}}
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="Password" class="form-control" name="Password" placeholder="Password" required>
+                </div>
+                
+                
+                <a href="/worker/login">Already have an Account ?</a>
+                <button type="submit" class="btn btn-primary float-right">Signup</button>
+            </form>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,50 @@
+<section>
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Sent request</h1>
+                {{!-- <p>{{content.user}}</p> --}}
+                {{!-- /worker/editwork/{{work._id}} --}}
+                <form action="/request/{{content._id}}" method="post" enctype="multipart/form-data">
+                    <input   hidden type="text" name="item_id" class="form-control" value="{{content._id}}">
+                    <input  hidden type="text" name="worker_id" class="form-control" value="{{content.user}}">
+                    <input hidden  type="text" name="customer_id" class="form-control" value="{{user._id}}">
+                    <label for="">Name</label>
+                    <input type="text" name="Name" class="form-control" value="{{content.works.Name}}">
+
+                    <label for="">Category</label>
+                    <input type="text" name="Category" class="form-control" value="{{content.works.Category}}">
+                    
+                    <label for="">Description</label>
+                    <input type="text" name="Description" class="form-control" value="{{content.works.Description}}">
+                    
+                    <label for="">Estimate price</label>
+                    <input type="text" name="Price" class="form-control" value="{{content.works.Price}}">
+                    
+                    
+                    <label for="">image</label><br>
+                    <img src="/images/work/{{content._id}}.png" alt="" style="width:100px;heiht:auto" id="imgview">
+                    <div></div>
+                    <div>
+                        <input hidden  type="text" name="C_Name" class="form-control" value="{{user.Name}}" >
+                        <input hidden  type="text" name="C_Address" class="form-control" value="{{user.Address}}" >
+                        <input hidden  type="text" name="C_Phone" class="form-control" value="{{user.Phone}}" >
+                    </div>
+                    <div>
+                        <input hidden type="checkbox" id="vehicle1" name="conformation" value="customer">
+                        <input hidden type="checkbox" id="vehicle1" name="conformation1" value="worker">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-success mt-4">sent a request</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    function viewimg(event){
+        document.getElementById('imgview').src=URL.createObjectURL(event.target.files[0])
+    }
+</script>

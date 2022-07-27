@@ -1,0 +1,35 @@
+<section>
+    <div class="container">
+        <h2>Contents</h2>
+        <div class="row mt-2">
+            <a href="/admin/addcontent" class="btn btn-success ml-auto">Add content</a>
+        </div>
+        <table class="table mt-5">
+            <thead>
+                <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">category</th>
+                    <th scope="col">description</th>
+                    <th scope="col">images</th>
+                    <th scope="col">options</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each content}}
+                <tr>
+                    
+                    <td>{{this.Name}}</td>
+                    <td>{{this.Category}}</td>
+                    <td>{{this.Description}}</td>
+                    <td><img style="width: 50px;height: 50px" src="/images/content/{{this._id}}.png" alt=""></td>
+                    <td>
+                        <a href="/admin/editcontent/{{this._id}}" class="btn btn-primary">Edit</a>
+                        <a href="/admin/deletecontent/{{this._id}}" class="btn btn-danger" onclick="return confirm('are you want to delete {{this.works.Name}} ?')">Delete</a>
+                    </td>
+
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</section>

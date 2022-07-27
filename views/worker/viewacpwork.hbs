@@ -1,0 +1,57 @@
+<section>
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Accept the request</h1>
+                {{!-- <p>{{content.user}}</p> --}}
+                {{!-- /worker/editwork/{{work._id}} --}}
+                <form action="/worker/viewacpwork/{{content._id}}" method="post" enctype="multipart/form-data">
+                    <input   hidden type="text" name="item_id" class="form-control" value="{{content.item_id}}">
+                    <input  hidden type="text" name="worker_id" class="form-control" value="{{content.worker_id}}">
+                    <input hidden  type="text" name="customer_id" class="form-control" value="{{content.customer_id}}">
+                    <label for="">Name</label>
+                    <input type="text" name="Name" class="form-control" value="{{content.Name}}">
+
+                    <label for="">Category</label>
+                    <input type="text" name="Category" class="form-control" value="{{content.Category}}">
+                    
+                    <label for="">Description</label>
+                    <input type="text" name="Description" class="form-control" value="{{content.Description}}">
+                    
+                    <label for="">Estimate price</label>
+                    <input type="text" name="Price" class="form-control" value="{{content.Price}}">
+                    <label for="">starting date</label>
+                    <input type="date" name="S_date" class="form-control" value="" required>
+                    <label for="">image</label>
+                    <img src="/images/work/{{content.item_id}}.png" alt="" style="width:100px;heiht:auto" id="imgview">
+                    <div>
+                        
+                    <input hidden type="text" name="C_Name" class="form-control" value="{{content.C_Name}}" >
+                    
+                    <input hidden type="text" name="C_Address" class="form-control" value="{{content.C_Address}}" >
+                   
+                    <input hidden type="phone" name="C_Phone" class="form-control" value="{{content.C_Phone}}" >
+                    </div>
+                    <div>
+                        <input hidden  type="text" name="W_Name" class="form-control" value="{{user.Name}}" >
+                        <input hidden  type="text" name="W_Address" class="form-control" value="{{user.Address}}" >
+                        <input hidden  type="number" name="W_Phone" class="form-control" value="{{user.Phone}}" >
+                        <input hidden  type="email" name="W_Email" class="form-control" value="{{user.Email}}" >
+                    </div>
+                    <div>
+                        <input hidden type="checkbox" id="vehicle1" name="worker" value="true" >
+                        <input hidden type="checkbox" id="vehicle1" name="conformation1" value="worker">
+                    </div>
+                    <label for="">confirm the work</label>
+                    <input type="radio" name="Accepted" value="true" required>
+                    <br>
+                    <button type="submit" class="btn btn-success mt-4" onclick="return confirm(You cannot change after conformation">Confirm the work</button>
+                </form>
+                <p>Customer Name:{{content.C_Name}}</p>
+                <p>Customer Address:{{content.C_Address}}</p>
+                <p>Customer Phone:{{content.C_Phone}}</p>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,27 @@
+<section>
+    <div class="container">
+        <h2>Message</h2>
+        <div class="row mt-2">
+          
+        </div>
+        <table class="table mt-5">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Message</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {{#each content}}
+                <tr>
+                    <td>{{this.Name}}</td>
+                    <td>{{this.Email}}</td>
+                    <td>{{this.message}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</section>

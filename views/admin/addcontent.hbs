@@ -1,0 +1,35 @@
+<section>
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Add Content</h1>
+                <form action="/admin/addcontent" method="post" enctype="multipart/form-data">
+                    <label for="">Name</label>
+                    <input type="text" name="Name" class="form-control">
+
+                   <div class="form-group">
+                    <label>Category</label>
+                    <br>
+                    <select name="Category" >
+                    {{#each Category}}
+                    <option value="{{this.Name}}">{{this.Name}}</option>
+                    {{/each}}
+                    </select>
+                </div>
+                    
+                    <label for="">Description</label>
+                    <input type="text" name="Description" class="form-control" style="height: 100px;">
+                    
+                                
+                    
+                    <label for="">image</label>
+                    <input type="file" name="image" class="form-control">
+                    
+                    <button type="submit" class="btn btn-success mt-4">Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>

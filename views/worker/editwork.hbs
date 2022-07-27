@@ -1,0 +1,36 @@
+<section>
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Edit work</h1>
+                <form action="/worker/editwork/{{work._id}}" method="post" enctype="multipart/form-data">
+                    <label for="">Name</label>
+                    <input type="text" name="Name" class="form-control" value="{{work.works.Name}}">
+
+                    <label for="">Category</label>
+                    <input type="text" name="Category" class="form-control" value="{{work.works.Category}}">
+                    
+                    <label for="">Description</label>
+                    <input type="text" name="Description" class="form-control" value="{{work.works.Description}}">
+                    
+                    <label for="">Estimate price</label>
+                    <input type="text" name="Price" class="form-control" value="{{work.works.Price}}">
+                    
+                    
+                    <label for="">image(add only .png files)</label><br>
+                    <img src="/images/work/{{work._id}}.png" alt="" style="width:100px;heiht:auto" id="imgview">
+                    <input type="file" name="image" class="form-control" onchange="viewimg(event)">
+                    
+                    <button type="submit" class="btn btn-success mt-4">Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    function viewimg(event){
+        document.getElementById('imgview').src=URL.createObjectURL(event.target.files[0])
+    }
+</script>

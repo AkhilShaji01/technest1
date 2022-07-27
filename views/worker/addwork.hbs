@@ -1,0 +1,40 @@
+{{!-- <head>
+    <link rel="stylesheet" href="/Uni1.css">
+</head> --}}
+<section>
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Add work</h1>
+                <form action="/worker/addwork" method="post" enctype="multipart/form-data">
+                    <label for="">Name</label>
+                    <input type="text" name="Name" class="form-control">
+
+                    <div class="form-group">
+                    <label>Category</label>
+                    <br>
+                    <select name="Category" >
+                    <option value="{{user1.category}}">{{user1.category}}</option>
+                    </select>
+                </div>
+                    
+                    <label for="">Description</label>
+                    <input type="text" name="Description" class="form-control">
+                    
+                    <label for="">Estimate price</label>
+                    <input type="Number" name="Price" class="form-control">
+                    
+                    
+                    <label for="">image (add only .png files)</label>
+                    <input type="file" name="image" class="form-control">
+                    
+                    <button type="submit" class="btn btn-success mt-4">Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    
+</section>
+

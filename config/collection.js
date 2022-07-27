@@ -1,0 +1,13 @@
+module.exports={
+   WORKER_COLLECTION:'worker',
+    CUSTOMER_COLLECTION:'customer',
+    WORK_COLLECTION:'work',
+    admin_COLLECTION:'admin',
+    CONTENT_COLLECTION:'content',
+    UNWORKER_COLLECTION:'unworker',
+    REQWORK_COLLECTION:'reqwork',
+    CATEGORY_COLLECTION:'category',
+    ACPWORK_COLLECTION:'acpwork',
+    CONWORK_COLLECTION:'conworks',
+    MESSAGE_COLLECTION:'message'
+}

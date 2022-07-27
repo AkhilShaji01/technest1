@@ -1,0 +1,42 @@
+
+<head>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.css"/>
+ 
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.js"></script>
+</head>
+<section>
+    
+    <div class="container">
+      <div class="row mt-2">
+          <h2>Works</h2>
+      </div>
+    <table id="table1" class="table" >
+      <thead>
+          <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Category</th>
+              <th scope="col">Description</th>
+              <th scope="col">Image</th>
+              <th scope="col">Options</th>
+          </tr>
+      </thead>
+      
+    <tbody>
+    {{#each work12}}
+        <tr>
+          <td>{{this.Name}}</td>
+          <td>{{this.Category}}</td>
+          <td>{{this.Description}}</td>
+          <td><img style="width: 50px;height: 50px" src="/images/content/{{this._id}}.png" alt=""></td>
+          <td><a href="/admin/view/{{this._id}}" class="btn btn-primary">view</a></td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
+</div>
+</section>
+<script>
+$(document).ready( function () {
+    $('#table1').DataTable();
+} );
+</script>

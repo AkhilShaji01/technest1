@@ -1,0 +1,50 @@
+<!-- Navigation
+    ==========================================-->
+<nav id="menu" class="navbar navbar-fixed-top navbar-expand-lg navbar-default ">
+  <div class="container-fluid"> 
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand page-scroll" href="/admin/home">TechNest</a>
+      <div class="phone"><span>Call Today</span>8304907415</div>
+    </div>
+    
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li><a href="/admin/home/#about" >About</a></li>
+        <li><a href="/admin/home/#testimonials" >Testimonials</a></li>
+        <li><a href="/admin/home/#contact" >Contact</a></li>
+        <li><a href="/admin/content" >Technological contents</a></li>
+        <li><a href="/admin/works" >Works</a></li>
+        
+         {{!-- <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="/images/search.png" alt="" style="height: 25px;width:25px;"></a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        
+                            <a class="dropdown-item" href="/admin/content">Technological details</a>
+                            
+                            <a class="dropdown-item" href="/admin/works">works</a>
+                            <a class="dropdown-item" href="/admin/worker">workers</a>
+                           
+                        </div>
+                    </li> --}}
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{#if user}}{{user.Name}}{{else}}Account{{/if}}</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            {{#if user}}
+                            <a class="dropdown-item" href="/admin/logout" >logout</a>
+                            <a class="dropdown-item" href="/admin/profile">Options</a>
+                            {{else}}
+                            <a class="dropdown-item" href="/admin/login">Login</a>
+                            
+                            {{/if}}
+
+
+
+                        </div>
+                    </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse --> 
+  </div>
+</nav>

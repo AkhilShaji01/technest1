@@ -1,0 +1,20 @@
+<div class="row">
+    <dv class="col-md-6 m-auto">
+        <div class="container">
+            <h2 class="text-center">change password</h2>
+            <form action="/worker/forgot" method="post">
+                <div class="form-group">
+                    <label>Enter your Email address</label>
+                    <input type="email" class="form-control" name="Email" placeholder="Enter email" required>
+
+                </div>
+                <div class="form-group">
+                    <label> New Password</label>
+                    <input type="Password" class="form-control" name="Password" placeholder="Password" required>
+                </div>
+                {{!-- <a href="/worker/signup">Create new Account ?</a> --}}
+                <button type="submit" class="btn btn-primary float-right">submit</button>
+            </form>
+        </div>
+    </div>
+</div>
